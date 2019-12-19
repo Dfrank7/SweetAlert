@@ -16,10 +16,8 @@ class SweetAlert {
 
     fun showSuccessAlert(activity: Activity, title : String, message : String, clickListener: OnClickListener ){
         var viewGroup = activity.findViewById<ViewGroup>(android.R.id.content)
-
         var dialogView = LayoutInflater.from(activity).inflate(R.layout.alert_activity, viewGroup, false)
         var drawable = dialogView.iconview.drawable
-
         var builder = AlertDialog.Builder(activity, R.style.CustomAlertDialog)
         builder.setView(dialogView)
         builder.setCancelable(false)
@@ -33,10 +31,8 @@ class SweetAlert {
             avd2 = drawable
             avd2.start()
         }
-        var buttonOk = dialogView.findViewById<Button>(R.id.buttonOk)
-        buttonOk.setOnClickListener{
+        dialogView.buttonOk.setOnClickListener{
             clickListener.setOkayButton(it)
-            it.buttonOk.text = ""
             dialog.dismiss()
         }
         dialogView.buttonCancel.setOnClickListener {
@@ -44,7 +40,6 @@ class SweetAlert {
             dialog.dismiss()
         }
         dialog.show()
-
     }
 
     fun showFailureAlert(activity: Activity, title: String, message: String, clickListener: OnClickListener) {
