@@ -5,7 +5,6 @@ import android.graphics.drawable.AnimatedVectorDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import kotlinx.android.synthetic.main.alert_activity.view.*
