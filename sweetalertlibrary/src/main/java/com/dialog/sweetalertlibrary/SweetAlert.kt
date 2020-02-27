@@ -40,6 +40,8 @@ class SweetAlert {
             dialog.dismiss()
         }
         dialog.show()
+        dialog.window!!.setLayout(750, ViewGroup.LayoutParams.WRAP_CONTENT)
+
     }
 
     fun showFailureAlert(activity: Activity, title: String, message: String, clickListener: OnClickListener) {
@@ -67,6 +69,7 @@ class SweetAlert {
             dialog.dismiss()
         }
         dialog.show()
+        dialog.window!!.setLayout(750, ViewGroup.LayoutParams.WRAP_CONTENT)
 
     }
 }
