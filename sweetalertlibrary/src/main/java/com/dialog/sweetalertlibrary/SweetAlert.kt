@@ -1,12 +1,12 @@
 package com.dialog.sweetalertlibrary
 
-import android.app.Activity
 import android.graphics.drawable.AnimatedVectorDrawable
+import android.support.graphics.drawable.AnimatedVectorDrawableCompat
+import android.support.v7.app.AlertDialog
+import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.appcompat.app.AlertDialog
-import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import kotlinx.android.synthetic.main.alert_activity.view.*
 
 class SweetAlert {
@@ -14,7 +14,7 @@ class SweetAlert {
     internal lateinit var avd : AnimatedVectorDrawableCompat
     internal lateinit var avd2 : AnimatedVectorDrawable
 
-    fun showSuccessAlert(activity: Activity, title : String, message : String, clickListener: OnClickListener ){
+    fun showSuccessAlert(activity: AppCompatActivity, title : String, message : String, clickListener: OnClickListener ){
         var viewGroup = activity.findViewById<ViewGroup>(android.R.id.content)
         var dialogView = LayoutInflater.from(activity).inflate(R.layout.alert_activity, viewGroup, false)
         var drawable = dialogView.iconview.drawable
@@ -44,7 +44,7 @@ class SweetAlert {
 
     }
 
-    fun showFailureAlert(activity: Activity, title: String, message: String, clickListener: OnClickListener) {
+    fun showFailureAlert(activity: AppCompatActivity, title: String, message: String, clickListener: OnClickListener) {
         var viewGroup = activity.findViewById<ViewGroup>(android.R.id.content)
 
         var dialogView =
